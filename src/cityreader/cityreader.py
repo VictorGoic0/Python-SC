@@ -84,16 +84,20 @@ longitude_input2 = input("Enter a second longitude coordinate. ")
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
+  lat1 = int(lat1)
+  lat2 = int(lat2)
+  lon1 = int(lon1)
+  lon2 = int(lon2)
   greater_lat = max(lat1, lat2)
   lesser_lat = min(lat1, lat2)
   greater_lon = max(lon1, lon2)
   lesser_lon = min(lon1, lon2)
-  within = [i for i in cities if ((i.lat < greater_lat and i.lat > lesser_lat) and (i.lon < greater_lon and i.lon > lesser_lon))]
-
+  within = [i for i in cities if (i.lat < greater_lat and i.lat > lesser_lat and i.lon < greater_lon and i.lon > lesser_lon)]
   # TODO Ensure that the lat and lon valuse are all floats
   # Go through each city and check to see if it falls within 
   # the specified coordinates.
 
   return within
 
-cityreader_stretch(latitude_input1, longitude_input1, latitude_input2, longitude_input2)
+filtered_cities = cityreader_stretch(latitude_input1, longitude_input1, latitude_input2, longitude_input2)
+print(filtered_cities)
