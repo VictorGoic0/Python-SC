@@ -3,10 +3,10 @@ from oop1 import *
 
 class Oop1Tests(unittest.TestCase):
   def setUp(self):
-    self.vehicle = Vehicle()
+    self.vehicle = Vehicle(4000)
     self.flight_vehicle = FlightVehicle()
-    self.ground_vehicle = GroundVehicle()
-    self.car = Car()
+    self.ground_vehicle = GroundVehicle(4000, 'Manual')
+    self.car = Car(20000, 'Automatic', 'Honda', 'CRV')
     self.motorcycle = Motorcycle()
     self.starship = Starship()
     self.airplane = Airplane()
