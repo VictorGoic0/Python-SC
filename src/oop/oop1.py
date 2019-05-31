@@ -17,18 +17,32 @@
 #     pass
 #
 # Put a comment noting which class is the base class
-class Vehicle:
-    def __init__(self, price):
-        self.price = price
-
 # Vehicle is the base class
+
+class Vehicle:
+    def __init__(self):
+        pass
+
+class FlightVehicle:
+    def __init__(self):
+        super().__init__()
+
+class Starship:
+    def __init__(self):
+        super().__init__()        
+
+class Airplane(FlightVehicle):
+    def __init__(self):
+        super().__init__()
+
 class GroundVehicle(Vehicle):
-    def __init__(self, price, transmission):
-        super().__init__( price)
-        self.transmission = transmission
+    def __init__(self):
+        super().__init__()
 
 class Car(GroundVehicle):
-    def __init__(self, price, transmission, brand, model):
-        super().__init__(self, price, transmission)
-        self.brand = brand
-        self.model = model
+    def __init__(self):
+        super().__init__()
+
+class Motorcycle(GroundVehicle):
+    def __init__(self):
+        super().__init__()

@@ -28,9 +28,8 @@ def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
-  city_file = csv.reader('cities.csv')
-  with open('cities.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile)
+  with open('cities.csv', newline='') as city_file:
+    spamreader = csv.reader(city_file)
     for row in spamreader:
       if row[0] != 'city':
         city = row[0]
