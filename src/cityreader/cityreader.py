@@ -99,5 +99,5 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
 
   return within
 
-filtered_cities = cityreader_stretch(latitude_input1, longitude_input1, latitude_input2, longitude_input2)
+filtered_cities = cityreader_stretch(latitude_input1, longitude_input1, latitude_input2, longitude_input2, cities)
 print(filtered_cities)
